@@ -1,9 +1,13 @@
 import React ,{useState}from 'react';
 import { fetchWeather } from './api/fetchWeather';
 import './App.css';
+
+
+    
 const App = () => {
     const [query, setQuery]=useState('');
     const [weather,setWeather]=useState('');
+
     const search =async(e)=>{
         if(e.key==='Enter')
         {
@@ -41,9 +45,11 @@ const App = () => {
                     <p>{weather.weather[0].description}</p>
                 </div>
             </div>
-        )}        
+        )}  
+        <p id='f'>Made by Srikant</p>      
         </div>
     )
 }
 
 export default App
+
